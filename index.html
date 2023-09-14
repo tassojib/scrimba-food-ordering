@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    
+    <title>Restaurant Ordering App</title>
+  </head>
+  <body>
+    
+    <header class="header">
+      <img src="./images/header.png" alt="pizza" class="header-img" />
+    </header>
+    
+    <main class="main">
+      
+      <section id="menu" class="menu">
+        <!-- *menu rendered here  -->
+      </section>
+      
+      <section id="order-container" class="order-container hidden">
+             <h3 class="order-title">Your Order</h3>
+             <div id="orders" class="hidden">
+        <!-- *cart rendered here-->
+              
+            </div>
+            <div class="total-price">
+              <p class="order-name">Total price:</p>
+              <p class="order-price" id="order-price">$$$</p>
+            </div>
+            <button class="complete-order-btn" id="complete-order-btn">Complete order</button> 
+      </section>
+      
+      <section id="payment-modal" class="payment-modal hidden">
+        <div class="btn-container">
+          <button class="close-btn" id="close-btn">X</button>
+        </div>
+        <div class="inner-payment-modal">
+          <h2>Enter card details</h2>
+          <form id="form">
+            <input
+              type="text"
+              id="customer-name"
+              name="customer-name"
+              placeholder="Enter your name"
+              aria-label="customer-name"
+              required
+            />
+            <input
+              type="number"
+              id="card-number"
+              name="card-number"
+              placeholder="Enter card number"
+              aria-label="card-number"
+              required
+            />
+            <input
+              type="number"
+              id="cvv"
+              name="cvv"
+              placeholder="Enter CVV"
+              aria-label="cvv"
+              required
+            />
+            <button type="submit" class="order-btn">Pay</button>
+          </form>
+        </div>
+    
+      </section>
+      
+      <section class="thank-you-msg hidden" id="thank-you-msg"></section>
+      
+    </main>
+
+  </body>
+  
+   <script src="index.js" type="module"></script>
+   
+</html>
